@@ -32,7 +32,7 @@ const Image = (props) => {
             <div className="content">
                 <div className="description">{props.description}</div>
                 <div className="meta">
-                    <a href={props.user.portfolio_url}>{props.user.name}</a>
+                    <a href={props.user.portfolio_url} target="_blank" rel="noreferrer">{props.user.name}</a>
                 </div>
             </div>
             <div className="extra content">
