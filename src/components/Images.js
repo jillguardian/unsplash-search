@@ -3,7 +3,7 @@ import React from 'react';
 const Images = (props) => {
 
     return (
-        <div className="ui link cards">
+        <div className="ui cards">
             {props.images.map(image => <Image key={image.id} {...image} />)}
         </div>
     );
