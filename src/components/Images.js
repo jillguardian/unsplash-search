@@ -12,8 +12,14 @@ const Images = (props) => {
 
 export default Images;
 
-const Image = (props) => {
+const DATE_OPTIONS = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+};
 
+const Image = (props) => {
+    const dateCreated = new Date(props.created_at);
     return (
         <div className="card">
             <div className="image">
@@ -26,8 +32,8 @@ const Image = (props) => {
                 </div>
             </div>
             <div className="extra content">
-                <span className="right floated">{props.created_at}</span>
-                <span><i className="heart icon"/>{props.likes}</span>
+                <span className="right floated">{dateCreated.toLocaleDateString('en-US', DATE_OPTIONS)}</span>
+                <span className="left floated"><i className="heart icon"/>{props.likes}</span>
             </div>
         </div>
     );
