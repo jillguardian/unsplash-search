@@ -30,7 +30,7 @@ const Image = (props) => {
                 <img src={props.urls.thumb} alt={props.description}/>
             </div>
             <div className="content">
-                <div className="header">{props.description}</div>
+                <div className="description">{props.description}</div>
                 <div className="meta">
                     <a href={props.user.portfolio_url}>{props.user.name}</a>
                 </div>
