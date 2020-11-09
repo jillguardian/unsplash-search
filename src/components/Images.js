@@ -3,8 +3,12 @@ import React from 'react';
 const Images = (props) => {
 
     return (
-        <div className="ui cards">
-            {props.images.map(image => <Image key={image.id} {...image} />)}
+        <div className="ui three column doubling stackable cards grid">
+            {props.images.map(image => {
+                return (
+                    <Image key={image.id} {...image} />
+                );
+            })}
         </div>
     );
 
@@ -21,7 +25,7 @@ const DATE_OPTIONS = {
 const Image = (props) => {
     const dateCreated = new Date(props.created_at);
     return (
-        <div className="card">
+        <div className="ui card">
             <div className="image">
                 <img src={props.urls.thumb} alt={props.description}/>
             </div>

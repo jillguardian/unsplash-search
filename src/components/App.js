@@ -23,12 +23,8 @@ export default class App extends React.Component {
                             <Search onSearch={this.onSearch} />
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="column">
-                            <Images images={this.state.images} />
-                        </div>
-                    </div>
                 </div>
+                <Images images={this.state.images} />
             </div>
         )
     }
